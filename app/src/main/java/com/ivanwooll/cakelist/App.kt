@@ -2,6 +2,7 @@ package com.ivanwooll.cakelist
 
 import android.app.Application
 import com.ivanwooll.cakelist.data.dagger.AppComponent
+import com.ivanwooll.cakelist.data.dagger.ContextModule
 import com.ivanwooll.cakelist.data.dagger.DaggerAppComponent
 
 class App : Application() {
@@ -16,6 +17,7 @@ class App : Application() {
         appComponent =
             DaggerAppComponent
                 .builder()
+                .contextModule(ContextModule(this))
                 .build()
     }
 }
