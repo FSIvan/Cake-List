@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cake List</string>
+    <string name="cakes">A Selection Of Our Cakes</string>
+    <string name="api_error_text">There was a problem contacting the server</string>
+    <string name="cakes_pending_text">No cakes found</string>
+    <string name="try_again">Try Again</string>
 </resources>
