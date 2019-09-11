@@ -15,7 +15,7 @@ interface CakeDao {
     @Query("DELETE FROM cakes")
     fun clearCakes()
 
-    @Query("SELECT * FROM cakes")
+    @Query("SELECT * FROM cakes ORDER BY title")
     fun allLiveData(): LiveData<List<Cake>>
 
 
