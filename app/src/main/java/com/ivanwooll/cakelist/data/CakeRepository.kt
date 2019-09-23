@@ -8,17 +8,7 @@ import com.ivanwooll.cakelist.data.room.Cake
 import com.ivanwooll.cakelist.extensions.executeAndUnwrap
 import javax.inject.Inject
 
-class CakeRepository {
-
-    @Inject
-    lateinit var apiService: ApiService
-
-    @Inject
-    lateinit var database: AppDatabase
-
-    init {
-        App.appComponent.inject(this)
-    }
+class CakeRepository(private val apiService: ApiService, private val database: AppDatabase) {
 
     fun clearCakesTable() = database.cakeDao().clearCakes() // clear the existing table
 
